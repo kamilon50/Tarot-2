@@ -1,4 +1,3 @@
-//foo//
 var suitNum = function () {
     //wands = 1, cups = 2, pentacles = 3, swords = 4
 	suit = Math.floor(Math.random()*4) +1;
@@ -111,12 +110,19 @@ var draw = function() {
 	return " it is " + cardRank + cardSuit + ".";
 };
 
-//xxx need to protect from duplicates in the draw. xxx//
 var reading = function(){
     var cards = [];
-    for(x=0; x<3; x++){
-        cards[x] = draw();
-    }
+	//draw cards and fill array
+	var fillCards = function(){
+		for(x=0; x<3; x++){
+        	cards[x] = draw();
+    	}
+	}
+	//check for dupes, if dupes, clear array and redraw
+	if(cards[0]===cards[1] || cards[1]===cards[2] || cards[0]===cards[2] || cards[0]===null){
+		cards = [];
+		fillCards();
+	}
     console.log("Your first card represents the past," + cards[0]);
     console.log("Your second card represents the present," + cards[1]);
     console.log("Your third card represents the future," + cards[2]);
