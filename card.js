@@ -1,3 +1,4 @@
+//foo//
 var suitNum = function () {
     //wands = 1, cups = 2, pentacles = 3, swords = 4
 	suit = Math.floor(Math.random()*4) +1;
