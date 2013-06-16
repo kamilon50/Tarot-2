@@ -127,3 +127,13 @@ var reading = function(){
     console.log("Your second card represents the present," + cards[1]);
     console.log("Your third card represents the future," + cards[2]);
 };
+
+//jQuery
+$(document).ready(function(){
+	$('div').mouseenter(function(){
+		$('div').fadeTo('fast', .5);
+	});
+	$('div').mouseleave(function(){
+		$('div').fadeTo('fast', 1);
+	});
+});
