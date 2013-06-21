@@ -129,11 +129,8 @@ var reading = function(){
 };
 
 //jQuery
-$(document).ready(function(){
-	$('div').mouseenter(function(){
-		$('div').fadeTo('fast', .5);
-	});
-	$('div').mouseleave(function(){
-		$('div').fadeTo('fast', 1);
-	});
+$(document).ready(function() {
+    $('.fade').click(function() {
+        $('.fade').fadeOut('slow');
+    });
 });
