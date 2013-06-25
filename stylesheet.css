@@ -1,8 +1,18 @@
-div {
-	height: 100px;
-	width: 100px;
-	margin: 0, auto;
+h1 {
+	font-family: cursive;
+	text-align: center;
+}
+
+.card {
 	display: inline-block;
+	height: 250px;
+	margin: auto;
+	width: 150px;
+}
+	
+.content {
+	display: block;
+	text-align: center;
 }
 
 .face-down {

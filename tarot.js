@@ -111,7 +111,7 @@ var draw = function() {
 };
 
 var reading = function(){
-    var cards = [];
+    cards = [];
 	//draw cards and fill array
 	var fillCards = function(){
 		for(x=0; x<3; x++){
@@ -123,15 +123,18 @@ var reading = function(){
 		cards = [];
 		fillCards();
 	}
-    console.log("Your first card represents the past," + cards[0]);
-    console.log("Your second card represents the present," + cards[1]);
-    console.log("Your third card represents the future," + cards[2]);
 };
 
 //jQuery
 $(document).ready(function() {
     $('.face-down').click(function() {
-		$(this).addClass('face-up');
-		$(this).removeClass('face-down');
+		$('.face-down').addClass('face-up');
+		$('.face-down').removeClass('face-down');
+		reading();
+		
+		//need logic to only deal once and check for which 
+		$('#past').append('<p>Your first card represents the past,' + cards[0] + '</p>');
+		$('#present').append('<p>Your second card represents the present,' + cards[1] + '</p>');
+		$('#future').append('<p>Your third card represents the future,' + cards[2] + '</p>');
     });
 });
