@@ -2,6 +2,13 @@ div {
 	height: 100px;
 	width: 100px;
 	margin: 0, auto;
-	background-color: blue;
 	display: inline-block;
+}
+
+.face-down {
+	background-color: blue;
+}
+
+.face-up {
+	background-color: purple;
 }

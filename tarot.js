@@ -130,7 +130,8 @@ var reading = function(){
 
 //jQuery
 $(document).ready(function() {
-    $('.fade').click(function() {
-        $(this).fadeOut('slow');
+    $('.face-down').click(function() {
+		$(this).addClass('face-up');
+		$(this).removeClass('face-down');
     });
 });
