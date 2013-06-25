@@ -131,6 +131,6 @@ var reading = function(){
 //jQuery
 $(document).ready(function() {
     $('.fade').click(function() {
-        $('.fade').fadeOut('slow');
+        $(this).fadeOut('slow');
     });
 });
