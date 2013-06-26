@@ -127,14 +127,15 @@ var reading = function(){
 
 //jQuery
 $(document).ready(function() {
-    $('.face-down').click(function() {
+    $('button').click(function() {
 		$('.face-down').addClass('face-up');
 		$('.face-down').removeClass('face-down');
 		reading();
-		
-		//need logic to only deal once and check for which 
+		 
 		$('#past').append('<p>Your first card represents the past,' + cards[0] + '</p>');
 		$('#present').append('<p>Your second card represents the present,' + cards[1] + '</p>');
 		$('#future').append('<p>Your third card represents the future,' + cards[2] + '</p>');
+		
+		$('#button').empty();
     });
 });
